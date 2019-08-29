@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="5" name="Failed suite [Suite]">
+  <parameter name="browserName" value="chrome"/>
+  <parameter name="TestcaseNo" value="1"/>
+  <listeners>
+    <listener class-name="com.baseClasses.Listener"/>
+  </listeners>
+  <test name="Test">
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="TestcaseNo" value="1"/>
+    <classes>
+      <class name="com.testScripts_General.MakeMyTripJourney"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="TestcaseNo" value="1"/>
+    <classes>
+      <class name="com.testScripts_General.MakeMyTripJourney">
+        <methods>
+          <include name="setUpSuiteDetails"/>
+          <include name="f" invocation-numbers="0"/>
+          <include name="captureDesc"/>
+          <include name="afterSuite"/>
+          <include name="BeforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.testScripts_General.MakeMyTripJourney -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

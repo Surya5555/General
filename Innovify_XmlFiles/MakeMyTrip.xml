@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" verbose="5">
+<listeners>
+<listener class-name="com.baseClasses.Listener"></listener>
+</listeners>
+    <test name="Test">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+           <parameter name="TestcaseNo" value="1"></parameter>   
+             <class name="com.testScripts_General.MakeMyTripJourney" />
+        </classes>
+    </test> 
+    
+</suite>  
