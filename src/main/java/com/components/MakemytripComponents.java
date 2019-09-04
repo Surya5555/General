@@ -7,13 +7,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.sikuli.script.Screen;
 import org.testng.Assert;
 
 import com.baseClasses.AutomationException;
 import com.baseClasses.BaseClass_Web;
 import com.baseClasses.PDFResultReport;
 import com.baseClasses.ThreadLocalWebdriver;
-import com.objectRepository.Makemytrp_Locators;
+ import com.objectRepository.Makemytrp_Locators;
 
 public class MakemytripComponents extends BaseClass_Web {
 	
@@ -47,10 +48,13 @@ public void login() throws Throwable{
 		set(locators.UserName, pdfResultReport.testData.get("USER NAME"));
 	    set(locators.PassWord,  pdfResultReport.testData.get("PASSWORD"));
 		 
-	  //  JSClick(locators.LogIn, "LogIn Button");
-	    ThreadLocalWebdriver.getDriver().findElement(By.xpath("//div[@class='btnContainer appendBottom25 ']//parent::button")).click();
+	 //   JSClick(locators.LogIn, "LogIn Button");
+	  
+	    Screen S = new Screen();
+	    Thread.sleep(2000);
+	    S.doubleClick("C:\\webdriver\\New folder\\Innovify_Task\\Resources\\LogINButton.jpg");
 	    
-	    
+	     
 	    pdfResultReport.addStepDetails("LogInto Account", "Application should allow the user to enter details",
 				"Successfully Signed into an account" + " ", "Pass", "Y");
 	

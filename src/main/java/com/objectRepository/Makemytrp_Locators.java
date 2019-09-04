@@ -9,8 +9,9 @@ public class Makemytrp_Locators {
 	public By LoginButton		= By.xpath("//p[contains(text(),' Login or Create Account')]");
 	public By UserName          = By.id("username");
 	public By PassWord          = By.cssSelector("input#password");
-	public By LogIn				= By.xpath("//div[@class='btnContainer appendBottom25 ']//parent::button");
-	
+//	public By LogIn				= By.xpath("//div[@class='btnContainer appendBottom25 ']//parent::button");
+	public By LogIn				= By.className("capText font16");
+
 	
 	 
 	

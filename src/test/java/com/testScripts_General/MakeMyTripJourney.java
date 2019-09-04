@@ -32,16 +32,18 @@ public class MakeMyTripJourney extends BaseClass_Web{
 	  } catch (Exception e) {
 		 
 		e.printStackTrace();
+		
 	}
 	    
 	      initializeRepository();
 	  	
 	      components.openUrl();   
-	    	
+	        	
 	      components.searchingFlight();
 	      components.bookFlight();
 	      components.login();
- 	      components.closedriver();
+		 	 
+	      components.closedriver();
 	
 	}
 }
