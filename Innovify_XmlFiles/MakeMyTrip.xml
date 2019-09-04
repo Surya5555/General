@@ -6,9 +6,9 @@
     <test name="Test">
         <parameter name="browserName" value="chrome"></parameter>
         <classes>
+   
            <parameter name="TestcaseNo" value="1"></parameter>   
              <class name="com.testScripts_General.MakeMyTripJourney" />
         </classes>
-    </test> 
-    
+    </test>   
 </suite>  

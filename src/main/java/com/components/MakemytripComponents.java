@@ -41,18 +41,20 @@ public void login() throws Throwable{
 		
 	 try{
 
-			ThreadLocalWebdriver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			
+		 	
 	    click(locators.LoginButton);
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		set(locators.UserName, pdfResultReport.testData.get("USER NAME"));
 	    set(locators.PassWord,  pdfResultReport.testData.get("PASSWORD"));
-		Thread.sleep(4000);    
-	    JSClick(locators.LogIn,"Login Button");
-
-		pdfResultReport.addStepDetails("LogInto Account", "Application should allow the user to enter details",
+		 
+	  //  JSClick(locators.LogIn, "LogIn Button");
+	    ThreadLocalWebdriver.getDriver().findElement(By.xpath("//div[@class='btnContainer appendBottom25 ']//parent::button")).click();
+	    
+	    
+	    pdfResultReport.addStepDetails("LogInto Account", "Application should allow the user to enter details",
 				"Successfully Signed into an account" + " ", "Pass", "Y");
-	} catch (Exception e) {
+	
+	 } catch (Exception e) {
 		System.out.println(e);
 		log.fatal("Unable to Loginto  account" + e.getMessage() + "Line Number :" + e.getStackTrace());
 		pdfResultReport.addStepDetails("Loginto account", "Unable to enter details",
@@ -69,11 +71,10 @@ public void searchingFlight() throws Exception{
 		
  	click(locators.FromOn);
  	set(locators.From, pdfResultReport.testData.get("FROM CITY"));
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 	click(locators.FromCity);
  	
-	Thread.sleep(4000);
-	set(locators.ToCity, pdfResultReport.testData.get("TO CITY"));
+ 	set(locators.ToCity, pdfResultReport.testData.get("TO CITY"));
 	click(locators.ToOn);
 	
 	click(locators.NextMonth);
@@ -120,28 +121,27 @@ try{
 	click(locators.BookNow);
 	switchTotab();
 		
- 	Thread.sleep(4000);
- 	
  	 
- 	Actions actions = new Actions(ThreadLocalWebdriver.getDriver());
- 	actions.moveToElement((WebElement) locators.ContinueBooking).click().build().perform();
- 	
  	 
-    //JSClick(locators.ContinueBooking ,"Continue Bokking");
-	//click(locators.AddAdult);
+   	click(locators.ContinueBooking);
+ 	 
+    click(locators.AddAdult);
 	
 	set(locators.FirstName, pdfResultReport.testData.get("FirstName"));
 	set(locators.LastName, pdfResultReport.testData.get("LastName"));
 	click(locators.Male);
 	
-	set(locators.FirstName, pdfResultReport.testData.get("FirstName"));
-	set(locators.LastName, pdfResultReport.testData.get("LastName"));
-	click(locators.Male);
+    Thread.sleep(2000);
+	click(locators.AddAdult);
+	
+	set(locators.FirstName2, pdfResultReport.testData.get("FirstName"));
+	set(locators.LastName2, pdfResultReport.testData.get("LastName"));
+	click(locators.Male2);
 	
 	set(locators.MobileNumber, pdfResultReport.testData.get("MobileNumber"));
 	set(locators.MailId, pdfResultReport.testData.get("MAIL ID"));
 	
-	click(locators.ContinueBooking);
+	click(locators.ContinueAtTicket);
 	
 	pdfResultReport.addStepDetails("Booking Flight", "Entered Flight Passenger Details",
 			"Successfully Entered details " + " ", "Pass", "Y");

@@ -9,8 +9,10 @@ public class Makemytrp_Locators {
 	public By LoginButton		= By.xpath("//p[contains(text(),' Login or Create Account')]");
 	public By UserName          = By.id("username");
 	public By PassWord          = By.cssSelector("input#password");
-	public By LogIn				= By.xpath("//button[@class='capText font16']");
+	public By LogIn				= By.xpath("//div[@class='btnContainer appendBottom25 ']//parent::button");
 	
+	
+	 
 	
 	public By FromOn 			= By.xpath("//*[@for='fromCity']");
 	public By From              = By.xpath("//input[@placeholder='From']");
@@ -19,7 +21,7 @@ public class Makemytrp_Locators {
 	public By ToCity		    = By.xpath("//input[@placeholder='To']");
 	public By ToOn				= By.xpath("//li[@id='react-autowhatever-1-section-0-item-0']");
 	public By NextMonth			= By.xpath("//span[@aria-label='Next Month']");
-	public By Date				= By.xpath("//div[@aria-label='Sat Sep 07 2019']");
+	public By Date				= By.xpath("//div[@aria-label='Wed Oct 09 2019']");
 	
 	public By Travellers        = By.xpath("//label[@for='travellers']");
 	public By NoOfTravellers    = By.xpath("(//li[contains(text(),'2')])[1]");
@@ -38,11 +40,14 @@ public class Makemytrp_Locators {
 	public By LastName			= By.xpath("//input[@placeholder='Last Name']");
 	public By Male				= By.xpath("(//label[@tabindex='0'])[1]");
 	
+	public By FirstName2		= By.xpath("(//input[@placeholder='First Name'])[2]");
+	public By LastName2			= By.xpath("(//input[@placeholder='Last Name'])[2]");
+	public By Male2             = By.xpath("(//label[@tabindex='0'])[2]");
 	
 	public By MobileNumber      = By.xpath("//input[@placeholder='Mobile No' and @type='text']");
 	public By MailId            = By.xpath("//input[@placeholder='Email' and @type='text']");
 	
-	
+	public By ContinueAtTicket  = By.xpath("//button[text()='Continue']");
 	
 	
 	

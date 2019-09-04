@@ -37,10 +37,11 @@ public class MakeMyTripJourney extends BaseClass_Web{
 	      initializeRepository();
 	  	
 	      components.openUrl();   
+	    	
 	      components.searchingFlight();
 	      components.bookFlight();
 	      components.login();
-		  components.closedriver();
+ 	      components.closedriver();
 	
 	}
 }

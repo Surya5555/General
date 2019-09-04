@@ -13,20 +13,4 @@
       <class name="com.testScripts_General.MakeMyTripJourney"/>
     </classes>
   </test> <!-- Test -->
-  <test name="Test(failed)">
-    <parameter name="browserName" value="chrome"/>
-    <parameter name="TestcaseNo" value="1"/>
-    <classes>
-      <class name="com.testScripts_General.MakeMyTripJourney">
-        <methods>
-          <include name="setUpSuiteDetails"/>
-          <include name="f" invocation-numbers="0"/>
-          <include name="captureDesc"/>
-          <include name="afterSuite"/>
-          <include name="BeforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- com.testScripts_General.MakeMyTripJourney -->
-    </classes>
-  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

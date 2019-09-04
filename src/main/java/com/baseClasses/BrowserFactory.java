@@ -8,9 +8,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+/*<<<<<<< HEAD
 
 
-public class BrowserFactory {
+=======
+>>>>>>> branch 'master' of https://github.com/Surya5555/General.git
+*/public class BrowserFactory {
 	public static String browser;
 	
 /*	BrowserFactory(String name){

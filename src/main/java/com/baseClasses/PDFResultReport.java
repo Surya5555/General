@@ -1123,7 +1123,7 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 								Cell cellValue = currentrow.getCell(k);
 								System.out.println("cellValue "+cellValue);
 								System.out.println("-----------------------------");
-								if(cellkey.toString() != ""){
+								if(cellkey.toString()!= ""){
 									if(!arrayOfString.contains(cellkey.toString())){
 										arrayOfString.add(cellkey.toString());
 										testData.put(cellkey.toString(), cellValue.toString());
